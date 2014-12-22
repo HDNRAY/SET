@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5fH-oC-6hU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="PAo-F3-Bkp">
+            <objects>
+                <viewController storyboardIdentifier="Main_iPhone" id="5fH-oC-6hU" customClass="MainController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IOk-aP-Aog"/>
+                        <viewControllerLayoutGuide type="bottom" id="gce-nf-o3j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DL9-gC-JSH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="111" placeholderIntrinsicHeight="30" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljl-k3-1U6">
+                                <rect key="frame" x="184" y="372" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="46" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3n-y7-l6l">
+                                <rect key="frame" x="295" y="368" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iAmClicked:" destination="5fH-oC-6hU" eventType="touchUpInside" id="xA9-cU-GG4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ljl-k3-1U6" firstAttribute="leading" secondItem="a3n-y7-l6l" secondAttribute="trailing" constant="78" id="HbX-FS-dQc"/>
+                            <constraint firstItem="a3n-y7-l6l" firstAttribute="leading" secondItem="DL9-gC-JSH" secondAttribute="leadingMargin" constant="80" id="IoG-2f-Zlj"/>
+                            <constraint firstItem="gce-nf-o3j" firstAttribute="top" secondItem="a3n-y7-l6l" secondAttribute="bottom" constant="90" id="dNH-nD-U1U"/>
+                            <constraint firstItem="a3n-y7-l6l" firstAttribute="top" secondItem="ljl-k3-1U6" secondAttribute="top" id="uri-Wk-OlH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HbX-FS-dQc"/>
+                                <exclude reference="IoG-2f-Zlj"/>
+                                <exclude reference="uri-Wk-OlH"/>
+                                <exclude reference="dNH-nD-U1U"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="HbX-FS-dQc"/>
+                                <include reference="IoG-2f-Zlj"/>
+                                <include reference="uri-Wk-OlH"/>
+                                <include reference="dNH-nD-U1U"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="ljl-k3-1U6" id="E9S-fx-4Mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wah-7c-8Vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340.5" y="228"/>
+        </scene>
+    </scenes>
+</document>
